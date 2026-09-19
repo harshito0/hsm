@@ -1,0 +1,138 @@
+.wrapper {
+  background-color: #f4f6f8;
+  padding: calc(6 * 8px) 0;
+}
+
+.headerArea {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.subTitle {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: -16px;
+  line-height: 1.5;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.stepCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.stepCard:hover {
+  border-color: rgb(83, 171, 218);
+  transform: translateX(6px);
+  box-shadow: 0 8px 20px rgba(83, 171, 218, 0.12);
+}
+
+.activeCard {
+  border-color: rgb(83, 171, 218);
+  border-left: 4px solid rgb(83, 171, 218);
+  background-color: #fcfdfd;
+  box-shadow: 0 10px 24px rgba(83, 171, 218, 0.14);
+}
+
+.stepNumWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.stepNum {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f0f7fb;
+  color: rgb(58, 119, 152);
+  border: 2px solid rgba(83, 171, 218, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.activeCard .stepNum,
+.stepCard:hover .stepNum {
+  background-color: rgb(83, 171, 218);
+  color: #ffffff;
+  border-color: rgb(83, 171, 218);
+  box-shadow: 0 0 12px rgba(83, 171, 218, 0.4);
+}
+
+.stepBody {
+  flex: 1;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.stepTitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.activeCard .stepTitle,
+.stepCard:hover .stepTitle {
+  color: rgb(58, 119, 152);
+}
+
+.stepBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  background-color: rgba(83, 171, 218, 0.1);
+  color: rgb(58, 119, 152);
+}
+
+.stepDesc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9375rem;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .stepCard {
+    padding: 16px;
+    gap: 16px;
+  }
+  .stepNum {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+}

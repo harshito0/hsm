@@ -1,0 +1,337 @@
+.wrapper {
+  background-color: #f4f6f8;
+  padding: calc(4 * 8px) 0;
+}
+
+.headerArea {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 36px;
+}
+
+.subTitle {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: -16px;
+  line-height: 1.5;
+}
+
+/* Cards row */
+.cardRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(3 * 8px);
+  margin-bottom: calc(3 * 8px);
+}
+
+@media (min-width: 1200px) {
+  .cardRow { gap: calc(4 * 8px); }
+}
+
+/* Card link */
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  max-width: calc(46 * 8px);
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .cardLink { flex: 0 0 calc(50% - calc(2 * 8px)); }
+}
+
+@media (min-width: 900px) {
+  .cardLink { flex: 0 0 calc(33.333% - calc(2 * 8px)); }
+}
+
+@media (min-width: 1200px) {
+  .cardLink { flex: 0 0 calc(33.333% - calc(4 * 8px)); }
+}
+
+/* Card — MUI Paper */
+.card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  overflow: hidden;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 24px -4px rgba(0,0,0,0.12), 0px 6px 12px -2px rgba(83, 171, 218, 0.2);
+}
+
+/* Thumbnail area */
+.thumbWrap {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.categoryTag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.thumbZoom {
+  transform: scale(1.08);
+}
+
+/* Card Content */
+.cardContent {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: rgb(83, 171, 218);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cardTitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(0,0,0,0.87);
+  margin: 0 0 10px;
+}
+
+.excerpt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(0,0,0,0.65);
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+/* ELEKS-Style Action link with sliding arrow */
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(58, 119, 152);
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.readMoreArrow {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardHover .readMoreArrow {
+  transform: translate(4px, -4px);
+  color: rgb(83, 171, 218);
+}
+
+/* CTA */
+.ctaWrap {
+  display: flex;
+  justify-content: center;
+  margin: calc(3 * 8px) 0;
+}
+
+.seeAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  padding: 8px 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: rgb(83, 171, 218);
+  color: rgba(0,0,0,0.87);
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.seeAllBtn:hover {
+  background-color: rgb(58, 119, 152);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(58, 119, 152, 0.35);
+}
+
+/* Quick Read Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInUp 0.25s ease;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(83, 171, 218, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+
+.modalMeta {
+  font-size: 0.8125rem;
+  color: rgb(83, 171, 218);
+  font-weight: 500;
+  margin: 0;
+}
+
+.modalClose {
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.125rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.modalClose:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.modalBody {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modalParagraph {
+  font-size: 0.9375rem;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.modalActions {
+  padding: 16px 28px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modalPageBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background-color: rgb(83, 171, 218);
+  color: #0f172a;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.modalPageBtn:hover {
+  background-color: rgb(58, 119, 152);
+  color: #ffffff;
+}
+
+.modalCloseTextBtn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modalCloseTextBtn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}

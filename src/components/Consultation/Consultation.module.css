@@ -1,0 +1,117 @@
+.wrapper {
+  background-color: #f4f6f8;
+  padding: calc(9 * 8px) 0 calc(3 * 8px);
+}
+
+/* Blue CTA Banner — exactly like original */
+.ctaBanner {
+  position: relative;
+  width: 100%;
+  padding: calc(10 * 8px);
+  background-color: rgb(83, 171, 218);
+  border-radius: 4px;
+  color: white;
+  margin-bottom: calc(3 * 8px);
+}
+
+.needHelp {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 calc(4 * 8px);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: calc(4 * 8px) 0;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: calc(3 * 8px) 0;
+  color: rgba(255,255,255,0.95);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Contact Row */
+.contactRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: calc(10 * 8px);
+  margin-bottom: calc(5 * 8px);
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: row;
+  gap: calc(4 * 8px);
+  align-items: flex-start;
+}
+
+.contactIconWrap {
+  transform: scale(2);
+  transform-origin: 50% 0;
+  color: white;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.contactLabel {
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  margin: 0 0 2px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contactValue {
+  font-size: 0.8rem;
+  line-height: 1.33;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Book button — white background, blue text */
+.bookBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: white;
+  color: rgb(83, 171, 218);
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bookBtn:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 900px) {
+  .ctaBanner { padding: calc(5 * 8px) calc(4 * 8px); }
+  .title { font-size: 2rem; }
+  .contactRow { gap: calc(4 * 8px); }
+}
+
+@media (max-width: 600px) {
+  .contactRow { flex-direction: column; gap: calc(3 * 8px); }
+}
