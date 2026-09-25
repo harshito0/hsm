@@ -7,10 +7,10 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.footerInner}>
-          {/* Brand Logo */}
-          <Link href="/" className={styles.logoBadge}>
+          {/* Brand Logo — transparent */}
+          <Link href="/" className={styles.logoLink}>
             <img
-              src="/logo.png"
+              src="/logo-transparent-light.png"
               alt="Human Power Service"
               className={styles.logoImg}
             />

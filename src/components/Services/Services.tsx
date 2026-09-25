@@ -58,8 +58,8 @@ export default function Services() {
               onMouseLeave={() => setHoveredId(null)}
             >
               <div
-                className={`${styles.card} ${hoveredId === service.id ? styles.cardHover : ''} reveal paper`}
-                style={{ animationDelay: `${i * 0.1}s` }}
+                className={`${styles.card} ${hoveredId === service.id ? styles.cardHover : ''} paper`}
+                style={{ animationDelay: `${i * 0.08}s` }}
               >
                 {/* Flag image area — shimmer effect + zoom on hover */}
                 <div

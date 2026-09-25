@@ -30,8 +30,8 @@ export default function News() {
               onMouseLeave={() => setHoveredId(null)}
             >
               <article
-                className={`${styles.card} ${hoveredId === article.id ? styles.cardHover : ''} reveal`}
-                style={{ animationDelay: `${i * 0.1}s` }}
+                className={`${styles.card} ${hoveredId === article.id ? styles.cardHover : ''}`}
+                style={{ animationDelay: `${i * 0.08}s` }}
               >
                 {/* Thumbnail with category tag */}
                 <div

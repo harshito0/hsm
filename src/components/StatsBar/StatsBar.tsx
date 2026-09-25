@@ -15,7 +15,7 @@ function StatItem({ target, suffix, label, sublabel }: StatItemProps) {
   const { count, ref } = useCounter({ end: target, duration: 1800 });
 
   return (
-    <div ref={ref} className={`${styles.statCard} reveal-scale`}>
+    <div ref={ref} className={styles.statCard}>
       <div className={styles.numberRow}>
         <span className={styles.number}>{count.toLocaleString()}</span>
         <span className={styles.suffix}>{suffix}</span>

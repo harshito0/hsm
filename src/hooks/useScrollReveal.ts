@@ -9,15 +9,37 @@ export function useScrollReveal() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            (entry.target as HTMLElement).dataset.visible = 'true';
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
 
-    const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-    elements.forEach((el) => observer.observe(el));
+    const observeAll = () => {
+      const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      elements.forEach((el) => {
+        if ((el as HTMLElement).dataset.visible === 'true') {
+          el.classList.add('visible');
+        } else {
+          observer.observe(el);
+        }
+      });
+    };
 
-    return () => observer.disconnect();
+    observeAll();
+
+    // Observe newly added or updated elements
+    const mutObserver = new MutationObserver(() => {
+      observeAll();
+    });
+
+    mutObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutObserver.disconnect();
+    };
   }, []);
 }
+

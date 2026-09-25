@@ -92,11 +92,18 @@
 
 @media (max-width: 600px) {
   .floatingContainer {
-    bottom: 16px;
-    right: 16px;
+    bottom: 14px;
+    right: 12px;
+    gap: 8px;
   }
   .pillBtn {
-    padding: 8px 14px;
-    font-size: 0.8125rem;
+    padding: 7px 12px;
+    font-size: 0.75rem;
+    gap: 6px;
+    box-shadow: 0 4px 14px rgba(83, 171, 218, 0.3);
+  }
+  .backToTopBtn {
+    width: 38px;
+    height: 38px;
   }
 }

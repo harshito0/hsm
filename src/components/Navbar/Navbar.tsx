@@ -2,22 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { siteData } from '@/lib/data';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('/');
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') setActiveLink(window.location.pathname);
   }, []);
 
   useEffect(() => {
@@ -30,26 +27,13 @@ export default function Navbar() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         <div className="container">
           <div className={styles.inner}>
-            {/* Mobile hamburger — left on mobile */}
-            <button
-              className={styles.mobileToggle}
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-            >
-              <span className={`${styles.bar} ${mobileOpen ? styles.barOpen1 : ''}`} />
-              <span className={`${styles.bar} ${mobileOpen ? styles.barOpen2 : ''}`} />
-              <span className={`${styles.bar} ${mobileOpen ? styles.barOpen3 : ''}`} />
-            </button>
-
-            {/* Official Logo */}
+            {/* Official Logo — clean transparent without background */}
             <Link href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
-              <div className={styles.logoBadge}>
-                <img
-                  src="/logo.png"
-                  alt="Human Power Service"
-                  className={styles.logoImg}
-                />
-              </div>
+              <img
+                src="/logo-transparent-light.png"
+                alt="Human Power Service"
+                className={styles.logoImg}
+              />
             </Link>
 
             {/* Desktop Nav — center */}
@@ -58,14 +42,14 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`${styles.navLink} ${activeLink === item.href ? styles.active : ''}`}
+                  className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
 
-            {/* Desktop right icons (settings / theme toggle — decorative like original) */}
+            {/* Desktop right icons */}
             <div className={styles.desktopActions}>
               <button className={styles.iconBtn} aria-label="Settings" title="Settings">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
@@ -83,6 +67,17 @@ export default function Navbar() {
                 </svg>
               </button>
             </div>
+
+            {/* Mobile hamburger — right on mobile */}
+            <button
+              className={styles.mobileToggle}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`${styles.bar} ${mobileOpen ? styles.barOpen1 : ''}`} />
+              <span className={`${styles.bar} ${mobileOpen ? styles.barOpen2 : ''}`} />
+              <span className={`${styles.bar} ${mobileOpen ? styles.barOpen3 : ''}`} />
+            </button>
           </div>
         </div>
       </nav>

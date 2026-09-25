@@ -30,7 +30,7 @@ export default function Process() {
             <div
               key={step.step}
               onClick={() => setActiveStep(step.step)}
-              className={`${styles.stepCard} ${activeStep === step.step ? styles.activeCard : ''} reveal`}
+              className={`${styles.stepCard} ${activeStep === step.step ? styles.activeCard : ''}`}
               style={{ animationDelay: `${i * 0.08}s` }}
             >
               <div className={styles.stepNumWrap}>

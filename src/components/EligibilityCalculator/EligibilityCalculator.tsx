@@ -41,7 +41,7 @@ export default function EligibilityCalculator() {
         </div>
 
         {/* Interactive Calculator Card */}
-        <div className={`${styles.calcCard} reveal-scale`}>
+        <div className={styles.calcCard}>
           <div className={styles.calcGrid}>
             {/* Left Controls */}
             <div className={styles.controlsCol}>

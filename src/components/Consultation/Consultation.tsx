@@ -8,11 +8,11 @@ export default function Consultation() {
     <div id="consultation" className={styles.wrapper}>
       <div className="container">
         {/* Blue CTA banner — exactly like original */}
-        <div className={`${styles.ctaBanner} reveal-scale`}>
+        <div className={styles.ctaBanner}>
           <p className={styles.needHelp}>Need help?</p>
           <p className={styles.title}>Get Your Free Consultation Now!</p>
           <p className={styles.subtitle}>
-            Book a Consultation or Contact Us Today — Let's Make Your Move to Work Easy and Stress-Free!
+            Book a Consultation or Contact Us Today — Let&apos;s Make Your Move to Work Easy and Stress-Free!
           </p>
 
           {/* Contact row */}

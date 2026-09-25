@@ -158,7 +158,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.reveal.visible {
+.reveal.visible,
+.reveal[data-visible="true"] {
   opacity: 1;
   transform: translateY(0);
 }
@@ -169,7 +170,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.reveal-left.visible {
+.reveal-left.visible,
+.reveal-left[data-visible="true"] {
   opacity: 1;
   transform: translateX(0);
 }
@@ -180,7 +182,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.reveal-right.visible {
+.reveal-right.visible,
+.reveal-right[data-visible="true"] {
   opacity: 1;
   transform: translateX(0);
 }
@@ -191,7 +194,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.reveal-scale.visible {
+.reveal-scale.visible,
+.reveal-scale[data-visible="true"] {
   opacity: 1;
   transform: scale(1);
 }

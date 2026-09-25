@@ -107,11 +107,42 @@
 }
 
 @media (max-width: 900px) {
-  .ctaBanner { padding: calc(5 * 8px) calc(4 * 8px); }
+  .ctaBanner { padding: 40px 28px; }
   .title { font-size: 2rem; }
-  .contactRow { gap: calc(4 * 8px); }
+  .contactRow { gap: 24px; }
 }
 
 @media (max-width: 600px) {
-  .contactRow { flex-direction: column; gap: calc(3 * 8px); }
+  .ctaBanner {
+    padding: 28px 18px;
+    border-radius: 8px;
+  }
+  .needHelp {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .title {
+    font-size: 1.625rem;
+    margin: 8px 0 12px;
+  }
+  .subtitle {
+    font-size: 0.875rem;
+    margin: 12px 0 20px;
+  }
+  .contactRow {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .contactItem {
+    gap: 16px;
+  }
+  .contactIconWrap {
+    transform: scale(1.5);
+  }
+  .bookBtn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.8125rem;
+  }
 }

@@ -33,8 +33,8 @@ export default function Testimonials() {
           {siteData.testimonials.map((t, i) => (
             <div
               key={t.id}
-              className={`${styles.card} ${i === active ? styles.cardActive : ''} reveal`}
-              style={{ animationDelay: `${i * 0.1}s` }}
+              className={`${styles.card} ${i === active ? styles.cardActive : ''}`}
+              style={{ animationDelay: `${i * 0.08}s` }}
               onMouseEnter={() => setActive(i)}
             >
               <Stars n={t.rating} />

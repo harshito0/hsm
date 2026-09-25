@@ -276,7 +276,45 @@
 }
 
 @media (max-width: 900px) {
-  .calcGrid { grid-template-columns: 1fr; }
-  .calcCard { padding: 24px; }
-  .chipsGrid { grid-template-columns: 1fr; }
+  .calcGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .calcCard {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.625rem;
+  }
+  .subtitle {
+    font-size: 0.875rem;
+  }
+  .calcCard {
+    padding: 18px 14px;
+    border-radius: 10px;
+  }
+  .chipsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .chipBtn {
+    padding: 9px 8px;
+    font-size: 0.8125rem;
+    gap: 6px;
+  }
+  .chipIcon {
+    font-size: 1.1rem;
+  }
+  .resultCol {
+    padding: 20px 16px;
+  }
+  .scoreNum {
+    font-size: 2.4rem;
+  }
+  .scoreLabel {
+    font-size: 0.875rem;
+  }
 }
