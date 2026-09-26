@@ -185,3 +185,54 @@
   .title { font-size: 1.625rem; }
   .ctaBox { flex-direction: column; align-items: flex-start; }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .pageWrapper {
+  background-color: #0b1120;
+}
+
+[data-theme="dark"] .breadcrumbBar {
+  background-color: #090d16;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .breadcrumbCurrent {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .articleContainer {
+  background-color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .title {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .leadText {
+  color: #cbd5e1;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .bodyParagraph {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .metaRow {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .ctaBox {
+  background: linear-gradient(135deg, rgba(83, 171, 218, 0.15) 0%, rgba(83, 171, 218, 0.04) 100%);
+  border-color: rgba(83, 171, 218, 0.4);
+}
+
+[data-theme="dark"] .ctaHeading {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .ctaSub {
+  color: #94a3b8;
+}
+

@@ -318,3 +318,45 @@
     font-size: 0.875rem;
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .section {
+  background-color: #090d16;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .title {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .subtitle {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .calcCard {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-color: rgba(83, 171, 218, 0.35);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .fieldLabel {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .chipBtn {
+  background-color: #162032;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .chipBtn:hover {
+  background-color: #1e2d42;
+  border-color: rgb(83, 171, 218);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .chipActive {
+  background-color: rgba(83, 171, 218, 0.2) !important;
+  border-color: rgb(83, 171, 218) !important;
+  color: #7dd3fc !important;
+}

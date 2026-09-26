@@ -149,3 +149,41 @@
     font-size: 0.95rem;
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .wrapper {
+  background-color: #0b1120;
+}
+
+[data-theme="dark"] .subTitle {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .stepCard {
+  background-color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .stepCard:hover {
+  background-color: #243447;
+  border-color: rgb(83, 171, 218);
+}
+
+[data-theme="dark"] .activeCard {
+  background-color: #243447;
+  border-color: rgb(83, 171, 218);
+}
+
+[data-theme="dark"] .stepTitle {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .stepDesc {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .stepBadge {
+  background-color: rgba(83, 171, 218, 0.2);
+  color: #7dd3fc;
+}

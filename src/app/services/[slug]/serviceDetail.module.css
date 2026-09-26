@@ -392,3 +392,61 @@
 @media (max-width: 600px) {
   .factsBar { grid-template-columns: 1fr; }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .pageWrapper {
+  background-color: #0b1120;
+}
+
+[data-theme="dark"] .breadcrumbBar {
+  background-color: #090d16;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .breadcrumbCurrent {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .mainCard {
+  background-color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .cardSectionTitle {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .occItem {
+  background-color: #162032;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .reqItem {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .sidebarCard {
+  background-color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sidebarTitle {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .sidebarDesc {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .phoneCallBtn {
+  color: #7dd3fc;
+  border-color: rgb(83, 171, 218);
+}
+
+[data-theme="dark"] .guaranteeBox {
+  color: #94a3b8;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}

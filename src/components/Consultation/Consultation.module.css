@@ -146,3 +146,8 @@
     font-size: 0.8125rem;
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .wrapper {
+  background-color: #0b1120;
+}

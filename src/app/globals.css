@@ -20,6 +20,23 @@
   --spacing: 8px;
 }
 
+[data-theme="dark"] {
+  --primary: rgb(83, 171, 218);
+  --primary-dark: rgb(117, 187, 225);
+  --primary-light: rgb(165, 215, 242);
+  --primary-faint: rgba(83, 171, 218, 0.15);
+  --bg: #090d16;
+  --bg-page: #0b1120;
+  --bg-paper: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-disabled: #64748b;
+  --divider: rgba(255, 255, 255, 0.1);
+  --shadow-1: 0px 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-4: 0px 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-20: 0px 12px 32px rgba(0, 0, 0, 0.6);
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -36,7 +53,12 @@ body {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f0f0f0; }
 ::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 3px; }
+[data-theme="dark"] ::-webkit-scrollbar-track { background: #0b1120; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #334155; }
 ::selection { background: var(--primary-light); color: white; }
+
+[data-theme="dark"] .section-title { color: #f8fafc; }
+[data-theme="dark"] .divider { border-color: rgba(255, 255, 255, 0.1); }
 
 /* ===== CONTAINER ===== */
 .container {

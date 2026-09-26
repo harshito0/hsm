@@ -117,3 +117,28 @@
     font-size: 0.7rem;
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .section {
+  background-color: #090d16;
+}
+
+[data-theme="dark"] .statCard {
+  background-color: #1e293b;
+  border-color: rgba(83, 171, 218, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .statCard:hover {
+  background-color: #243447;
+  border-color: rgb(83, 171, 218);
+  box-shadow: 0 10px 25px -5px rgba(83, 171, 218, 0.25);
+}
+
+[data-theme="dark"] .label {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .sublabel {
+  color: #94a3b8;
+}

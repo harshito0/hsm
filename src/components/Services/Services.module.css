@@ -526,3 +526,114 @@
     margin-bottom: 12px;
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .wrapper {
+  background-color: #0b1120;
+}
+
+[data-theme="dark"] .subTitle {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .filterChip {
+  background-color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .filterChip:hover {
+  background-color: #243447;
+  color: #ffffff;
+  border-color: rgb(83, 171, 218);
+}
+
+[data-theme="dark"] .activeFilterChip {
+  background-color: rgb(83, 171, 218) !important;
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .card {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .cardTitle,
+[data-theme="dark"] .cardTitle a {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .cardDesc {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .cardAction {
+  color: #7dd3fc;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .modalOverlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+[data-theme="dark"] .modalCard {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .modalTitle {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .modalSubtitle {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .modalClose {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .modalClose:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .modalStatBox {
+  background-color: #162032;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .modalStatLabel {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .modalStatValue {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .modalSectionTitle {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .modalListItem {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .stepDesc {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .modalFooter {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .modalConsultBtn {
+  color: #7dd3fc;
+  border-color: rgb(83, 171, 218);
+}
+
+[data-theme="dark"] .modalConsultBtn:hover {
+  background-color: rgba(83, 171, 218, 0.15);
+}

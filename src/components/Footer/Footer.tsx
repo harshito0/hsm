@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import { siteData } from '@/lib/data';
+import { useTheme } from '@/hooks/useTheme';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const { theme } = useTheme();
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -10,7 +15,7 @@ export default function Footer() {
           {/* Brand Logo — transparent */}
           <Link href="/" className={styles.logoLink}>
             <img
-              src="/logo-transparent-light.png"
+              src={theme === 'dark' ? '/logo-transparent-dark.png' : '/logo-transparent-light.png'}
               alt="Human Power Service"
               className={styles.logoImg}
             />

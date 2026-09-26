@@ -215,8 +215,120 @@
   margin: 12px 0;
 }
 
+.activeThemeBtn {
+  color: rgb(83, 171, 218) !important;
+  background-color: rgba(83, 171, 218, 0.12) !important;
+}
+
+.mobileThemeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.mobileThemeLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.mobileThemeBtns {
+  display: flex;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 4px;
+  border-radius: 9999px;
+}
+
+.mobileThemeBtn {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease;
+}
+
+.mobileThemeBtnActive {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .navbar {
+  background-color: rgba(15, 23, 42, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+  background-color: rgba(15, 23, 42, 0.98);
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .navLink {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .navLink:hover,
+[data-theme="dark"] .navLink.active {
+  color: #38bdf8;
+  background-color: rgba(83, 171, 218, 0.12);
+}
+
+[data-theme="dark"] .iconBtn {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .iconBtn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .activeThemeBtn {
+  color: #38bdf8 !important;
+  background-color: rgba(83, 171, 218, 0.2) !important;
+}
+
+[data-theme="dark"] .mobileToggle {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .mobileMenu {
+  background: rgba(15, 23, 42, 0.98);
+}
+
+[data-theme="dark"] .mobileDivider {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .mobileThemeLabel {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .mobileThemeBtns {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .mobileThemeBtn {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .mobileThemeBtnActive {
+  background: #1e293b;
+  color: #38bdf8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }

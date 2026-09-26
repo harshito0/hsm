@@ -85,3 +85,29 @@
   background-color: rgb(83, 171, 218);
   opacity: 0.7;
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .marqueeWrapper {
+  background-color: #0b1120;
+  border-top-color: rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .marqueeWrapper::before {
+  background: linear-gradient(to right, #0b1120, rgba(11, 17, 32, 0));
+}
+
+[data-theme="dark"] .marqueeWrapper::after {
+  background: linear-gradient(to left, #0b1120, rgba(11, 17, 32, 0));
+}
+
+[data-theme="dark"] .marqueeItem {
+  background-color: #1e293b;
+  border-color: rgba(83, 171, 218, 0.25);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .marqueeItem:hover {
+  background-color: #243447;
+  color: #ffffff;
+}

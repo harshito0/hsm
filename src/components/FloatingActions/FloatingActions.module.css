@@ -107,3 +107,28 @@
     height: 38px;
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .pillBtn {
+  background-color: #1e293b;
+  color: #7dd3fc;
+  border-color: rgb(83, 171, 218);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .pillBtn:hover {
+  background-color: rgb(83, 171, 218);
+  color: #0f172a;
+}
+
+[data-theme="dark"] .backToTopBtn {
+  background-color: #1e293b;
+  color: #7dd3fc;
+  border-color: rgba(83, 171, 218, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .backToTopBtn:hover {
+  background-color: rgb(83, 171, 218);
+  color: #0f172a;
+}

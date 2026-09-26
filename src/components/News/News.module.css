@@ -382,3 +382,67 @@
     padding: 16px;
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .wrapper {
+  background-color: #0b1120;
+}
+
+[data-theme="dark"] .subTitle {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .card {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .cardTitle,
+[data-theme="dark"] .cardTitle a {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .date {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .excerpt {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .readMore {
+  color: #7dd3fc;
+}
+
+[data-theme="dark"] .modalOverlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+[data-theme="dark"] .modalCard {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .modalTitle {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .modalMeta {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .modalParagraph {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .modalCloseTextBtn {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .modalCloseTextBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}

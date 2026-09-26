@@ -63,3 +63,21 @@
   text-align: center;
   margin: 0;
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .footer {
+  background-color: #070b12;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .navLink {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .navLink:hover {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .copyright {
+  color: #64748b;
+}

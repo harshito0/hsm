@@ -72,25 +72,9 @@ const heroPanels = [
   },
 ];
 
-const rotatingKeywords = [
-  'Fast & Reliable',
-  '100% Legal & Compliant',
-  'End-to-End Support',
-  'Consular Guaranteed',
-];
-
 export default function Hero() {
   const [activeTab, setActiveTab] = useState('overview');
-  const [keywordIdx, setKeywordIdx] = useState(0);
   const [scrollY, setScrollY] = useState(0);
-
-  // Rotating keyword ticker
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setKeywordIdx((prev) => (prev + 1) % rotatingKeywords.length);
-    }, 2800);
-    return () => clearInterval(interval);
-  }, []);
 
   // Parallax scroll listener
   useEffect(() => {
